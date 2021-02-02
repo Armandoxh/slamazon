@@ -1,0 +1,10 @@
+{
+    "Inventory": {
+        "_model": "Inventory",
+        "shrimp":{
+        "name" : "Shrimp",
+        "price": 500,
+        "quantity": 600
+        }
+        }
+}

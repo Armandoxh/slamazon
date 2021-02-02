@@ -6,10 +6,16 @@ const session = require('express-session')
 
 const port = 3100;
 
+//routes
 const indexRouter = require('./routes/index')
+const userRouter = require('./routes/user')
+
+
 const app = express();
 require('dotenv').config();
 
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.set('view engine', 'ejs');
 
@@ -21,10 +27,10 @@ require('./config/passport');
  */
 app.use( methodOverride('_method') );
 
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 app.use(express.static('public'));
+
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -32,8 +38,13 @@ app.use(express.urlencoded({ extended: true }));
  * for parsing application/x-www-form-urlencoded 
  */
 app.use('/', indexRouter)
+app.use('/',userRouter)
 
-
+app.use(session({
+    secret: 'SEIRFLEXRocks!',
+    resave: false,
+    saveUninitialized: true
+  }));
 
 
 app.listen(port, () => {

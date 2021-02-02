@@ -3,6 +3,8 @@ const router = require('express').Router();
 const passport = require('passport');
 
 router.get('/', function(req, res) {
+    console.log('redirecting to index from index.js route'),
+
     res.render('index', {
         user: req.user
     });
@@ -16,7 +18,7 @@ router.get('/', function(req, res) {
   
   router.get('/oauth2callback', passport.authenticate('google', 
   {
-    successRedirect : '/',
+    successRedirect : '/user/index',
     failureRedirect : '/'
   }
   ));

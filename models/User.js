@@ -12,7 +12,11 @@ const userSchema = new mongoose.Schema({
         type:String,
         
     },
-    googleId: String
+    googleId: String,
+    orders:{
+        type: [mongoose.Types.ObjectId],
+        ref:'Order'
+    }
 },{
     timestamps: true
 });

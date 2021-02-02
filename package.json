@@ -23,8 +23,12 @@
     "express-session": "^1.17.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.8.1",
+    "mongoose-seeder": "^1.2.1",
     "morgan": "^1.9.1",
     "passport": "^0.4.1",
     "passport-google-oauth": "^2.0.0"
+  },
+  "devDependencies": {
+    "faker": "^5.2.0"
   }
 }

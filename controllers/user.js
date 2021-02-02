@@ -9,8 +9,9 @@ module.exports = {
 function index (req, res, next){
     User.find({}, function(err, users){
         console.log('redirecting to /index from user controller')
-        res.render('/user/index',{
-         users
+        res.render('user/index',{
+         users,
+         user:req.user
         })
     })
 }

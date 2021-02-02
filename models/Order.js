@@ -9,6 +9,14 @@ const orderSchema = new mongoose.Schema({
     user : {
         type: mongoose.Types.ObjectId,
         ref: 'User'
+    },
+    /**
+     * Completed or pending
+     */
+    orderStatus:{
+    type: String,
+    enum :[ 'Completed', 'Pending'],
+    default: 'Pending' 
     }
 },{
     timestamps: true

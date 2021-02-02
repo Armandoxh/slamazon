@@ -9,7 +9,7 @@ const port = 3100;
 //routes
 const indexRouter = require('./routes/index')
 const userRouter = require('./routes/user')
-
+const marketRouter = require('./routes/marketplace')
 
 const app = express();
 require('dotenv').config();
@@ -39,6 +39,7 @@ app.use(express.urlencoded({ extended: true }));
  */
 app.use('/', indexRouter)
 app.use('/',userRouter)
+app.use('/marketplace',marketRouter )
 
 app.use(session({
     secret: 'SEIRFLEXRocks!',

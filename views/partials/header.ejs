@@ -23,11 +23,11 @@
 
               <ul class="navbar-nav  d-flex">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                  <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
                 </li>
                
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Marketplace</a>
+                  <a class="nav-link" href="/marketplace">Marketplace</a>
                 </li>
                 
                 <form class="nav-item d-flex">
@@ -38,11 +38,9 @@
               </ul>
              
               <li class = "d-flex">
-                <% if (user) { %>
-                  <a class = "nav-link" href="/logout"><i class="nav-item"></i>Log Out</a>
-                <% } else { %>
+               
                   <a class = "nav-link" href="/auth/google"></i>Login with Google</a>
-                <% } %>
+        
                 </li>
             </div>
           </nav>

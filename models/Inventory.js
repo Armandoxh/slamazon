@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
-
+const Schema = mongoose.Schema
 
 const inventorySchema = new mongoose.Schema({
     name: String,
     price: Number,
     quantity: Number,
+    description: String
 },{
     timestamps: true
 });
@@ -14,6 +15,5 @@ const inventorySchema = new mongoose.Schema({
 const Inventory = mongoose.model( 'Inventory', inventorySchema );
 
 
-module.exports ={
+module.exports =
     Inventory
-}

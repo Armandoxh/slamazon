@@ -15,7 +15,8 @@ const userSchema = new mongoose.Schema({
     googleId: String,
     orders:{
         type: [mongoose.Types.ObjectId],
-        ref:'Order'
+        ref:'Order',
+        
     }
 },{
     timestamps: true

@@ -2,8 +2,13 @@ const mongoose = require('mongoose');
 
 
 const orderSchema = new mongoose.Schema({
+    /**
+     * add this to basket object
+     * replace with items tag
+     * 
+     */
     basket:[{
-        type: [mongoose.Types.ObjectId],
+        type: mongoose.Types.ObjectId,
         ref: 'Inventory'
     }],
     user : {

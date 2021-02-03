@@ -4,4 +4,6 @@ const marketplaceCtrl = require('../controllers/marketplace');
 
 router.get('/', marketplaceCtrl.index)
 
+
+
 module.exports = router;

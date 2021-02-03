@@ -37,9 +37,7 @@ app.use(express.urlencoded({ extended: true }));
 /**
  * for parsing application/x-www-form-urlencoded 
  */
-app.use('/', indexRouter)
-app.use('/',userRouter)
-app.use('/marketplace',marketRouter )
+
 
 app.use(session({
     secret: 'SEIRFLEXRocks!',
@@ -47,7 +45,10 @@ app.use(session({
     saveUninitialized: true
   }));
 
-
+  app.use('/', indexRouter)
+  app.use('/',userRouter)
+  app.use('/marketplace',marketRouter )
+  
 app.listen(port, () => {
     console.log(`Port: ${port}`);
   });

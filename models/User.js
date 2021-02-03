@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 
 
+
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -10,14 +11,16 @@ const userSchema = new mongoose.Schema({
     email: String,
     company:{
         type:String,
-        
     },
     googleId: String,
     orders:{
         type: [mongoose.Types.ObjectId],
         ref:'Order',
-        
-    }
+    },
+    basket:[{
+        type: mongoose.Types.ObjectId,
+        ref: 'Inventory'
+    }],
 },{
     timestamps: true
 });

@@ -27,14 +27,22 @@ function index(req, res,next) {
     console.log("INDEX FUNCTION OF THE MARKETPLACE JS CONTROLLER")
     Inventory.find({}, function(err, inventory ) {
                      if(err) return console.log(err)
-                     User.find({},function(err, foundUser){
-                        if(err) return console.log(err)
+                     
+                     
+
+                     User.findById(req.user._id).populate('basket').exec(function(err, foundUser){
+                        console.log("Found User in addbasket:" , foundUser)
+                       if(err) return console.log(err)
+                       
+                       foundUser.save()
+                       
     if(seeded===false){
          seed();}
          res.render('user/marketplace', { inventory,foundUser});
+    })
     });
-})
-  }
+}
+
 
 
 /**TODO
@@ -43,7 +51,7 @@ function index(req, res,next) {
  */
 
   function addToBasket(req,res){
-      console.log("req.user" , req.user)
+    //   console.log("req.user" , req.user)
      Inventory.find({}, function(err, inventory ) {
          if(err) return console.log(err)
          User.findById(req.user._id).populate('basket').exec(function(err, foundUser){
@@ -65,6 +73,8 @@ function index(req, res,next) {
     //needs to pass it to the home page 
     //home page needs to render a card with the order
 
+    console.log("WE MADE IT TO THE PLACEORDER CONTROLLER")
+    res.render('user/index', {})
 
   }
 

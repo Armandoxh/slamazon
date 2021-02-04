@@ -5,7 +5,7 @@ const Inventory = require('../models/Inventory');
 module.exports = {
     index,
     addOrder,
-    addToBasket
+    
 }
 
 function index (req, res, next){
@@ -19,8 +19,11 @@ function index (req, res, next){
 }
 
 
-function addToBasket(req,res){
-    console.log(req.body)
+function addToBasket(req,res,next){
+
+    console.log ( "ADD TO bASKET REDIRECT OF USER CONTROLLER")
+    console.log("REQ: " , req)
+    console.log("RES : " , res)
 
   //   const basket = new db.Basket();
   console.log("2341234123412341234")
@@ -40,7 +43,7 @@ function addToBasket(req,res){
       foundUser[0].save()
       
     
-      res.render('/user/marketplace', {foundUser});
+      res.render('user/marketplace', {foundUser});
   
     })
   //   basket.save(function(err) {

@@ -10,7 +10,7 @@ passport.use(new GoogleStrategy({
  },
 
  function(accessToken, refreshToken, profile, cb) {
-    User.findOne({ 'googleId': profile.id }, function(err, user) {
+    User.findOne({ 'email': profile.emails[0].value }, function(err, user) {
       if (err) return cb(err);
       if (user) {
         return cb(null, user);
@@ -32,11 +32,16 @@ passport.use(new GoogleStrategy({
 ));
 
 passport.serializeUser(function(user, done) {
+    
     done(null, user.id);
 });
 
 passport.deserializeUser(function(id, done) {
+    
     User.findById(id, function(err, user) {
+
+        if(err) return console.log(err)
+        // console.log("DESERIALIZE USER BEFORE SAVE" , user)
       done(err, user);
     });
   });

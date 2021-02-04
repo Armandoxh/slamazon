@@ -5,10 +5,15 @@ const inventorySchema = new mongoose.Schema({
     name: String,
     price: Number,
     quantity: Number,
-    description: String
+    description: String,
+    user : {
+        type: mongoose.Types.ObjectId,
+        ref: 'User'
+    },
 },{
     timestamps: true
 });
+
 
 
 

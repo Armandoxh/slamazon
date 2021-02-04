@@ -14,9 +14,6 @@ const marketRouter = require('./routes/marketplace')
 const app = express();
 require('dotenv').config();
 
-app.use(passport.initialize());
-app.use(passport.session());
-
 app.set('view engine', 'ejs');
 
 require('./config/database');
@@ -26,9 +23,6 @@ require('./config/passport');
  * MethodOverride requires it to be able to make custom URLS
  */
 app.use( methodOverride('_method') );
-
-
-
 app.use(express.static('public'));
 
 app.use(morgan('dev'));
@@ -44,11 +38,20 @@ app.use(session({
     resave: false,
     saveUninitialized: true
   }));
+app.use(passport.initialize());
+app.use(passport.session());
+/**
+ * not getting access to req user
+ */
+app.use(function(req,res,next){
+    // console.log("server js req.user" , req.user)
+    next()
+  })
 
-  app.use('/', indexRouter)
-  app.use('/',userRouter)
-  app.use('/marketplace',marketRouter )
-  
+app.use('/', indexRouter)
+app.use('/',userRouter)
+app.use('/marketplace',marketRouter )
+
 app.listen(port, () => {
     console.log(`Port: ${port}`);
   });

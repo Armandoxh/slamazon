@@ -2,18 +2,21 @@ const db = require('../models/index')
 const Inventory = require('../models/Inventory');
 const Order = require ('../models/Order')
 const Basket = require('../models/Basket')
+const User = require('../models/User')
 
 var faker = require('faker');
 let seeded = false; 
 module.exports = {
     index,
+    addToBasket,
+    placeOrder
     // addToBasket
   };
 /**
  * every time server r/s
  * search the collection for baskets if there is one dont make another one
  * have to handle the basket for every user
- * erase basket when user done
+ * erase basket when user donea
  * 
  */
 
@@ -21,27 +24,16 @@ module.exports = {
 
 function index(req, res,next) {
 
+    console.log("INDEX FUNCTION OF THE MARKETPLACE JS CONTROLLER")
     Inventory.find({}, function(err, inventory ) {
                      if(err) return console.log(err)
-
+                     User.find({},function(err, foundUser){
+                        if(err) return console.log(err)
     if(seeded===false){
          seed();}
-             
-             
-// 
-
-         res.render('user/marketplace', { inventory});
-
-        //  Basket.create(...[], function(err, createdBasket){
-        //      if(err) return console.log(err)
-
-        //      const basket = createdBasket
-        //     //  createdBasket.save()
-        //      console.log(createdBasket, "createdBasket")
-            
-        //  });
-      
+         res.render('user/marketplace', { inventory,foundUser});
     });
+})
   }
 
 
@@ -51,33 +43,32 @@ function index(req, res,next) {
  */
 
   function addToBasket(req,res){
-      console.log(req.body)
-
-    //   const basket = new db.Basket();
-    
-      db.Basket.find({},function(err, foundBasket){
-        if(err) return console.log(err)
-    
-        // foundBasket.items.push(req.body.itemID)
-        // foundBasket.save()
-        console.log("FOUND BASKET ITEMS: ", foundBasket)
-        console.log("req - body: ", req.body, )
-        res.redirect('/marketplace');
-    
-      })
-    //   basket.save(function(err) {
-    //       // one way to handle errors
-    //       if (err) return res.redirect('/users/marketplace');
-    //       console.log(basket);
-    //       // for now, redirect right back to new.ejs
-    //       res.redirect('/users/marketplace');
-    //     });
-  
-    // res.redirect('user/marketplace')
-      
-
-    
+      console.log("req.user" , req.user)
+     Inventory.find({}, function(err, inventory ) {
+         if(err) return console.log(err)
+         User.findById(req.user._id).populate('basket').exec(function(err, foundUser){
+             console.log("Found User in addbasket:" , foundUser)
+            if(err) return console.log(err)
+            foundUser.basket.push(req.body.itemID)
+            foundUser.save()
+            
+            res.render('user/marketplace', {inventory, foundUser});
+           })
+     })
   }
+
+
+
+  function placeOrder(req,res){
+   
+    //needs to take the basket
+    //needs to pass it to the home page 
+    //home page needs to render a card with the order
+
+
+  }
+
+
 
   function renderBasket(req,res){
     console.log(req.body)

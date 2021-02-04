@@ -9,7 +9,7 @@ let seeded = false;
 module.exports = {
     index,
     addToBasket,
-    placeOrder
+    
     // addToBasket
   };
 /**
@@ -67,16 +67,7 @@ function index(req, res,next) {
 
 
 
-  function placeOrder(req,res){
-   
-    //needs to take the basket
-    //needs to pass it to the home page 
-    //home page needs to render a card with the order
-
-    console.log("WE MADE IT TO THE PLACEORDER CONTROLLER")
-    res.render('user/index', {})
-
-  }
+ 
 
 
 

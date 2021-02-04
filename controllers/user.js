@@ -5,6 +5,7 @@ const Inventory = require('../models/Inventory');
 module.exports = {
     index,
     addOrder,
+    placeOrder
     
 }
 
@@ -17,6 +18,28 @@ function index (req, res, next){
         })
     })
 }
+
+
+function placeOrder(req,res){
+   
+    //needs to take the basket
+    //needs to pass it to the home page 
+    //home page needs to render a card with the order
+
+    User.findById(req.user._id,( err, foundUser ) => {
+        if(err) console.log(err)
+        console.log("PLACEORDER FoundUser" , foundUser)
+
+
+        
+        console.log("WE MADE IT TO THE PLACEORDER CONTROLLER")
+        res.render('user/index', {foundUser})
+      });
+
+   
+
+  }
+
 
 
 function addToBasket(req,res,next){

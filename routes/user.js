@@ -3,7 +3,7 @@ const userCtrl = require('../controllers/user');
 
 router.get('/user/index', userCtrl.index);
 
-
+router.post('/placeOrder', userCtrl.placeOrder)
 
   
 

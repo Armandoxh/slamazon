@@ -13,10 +13,11 @@ const userSchema = new mongoose.Schema({
         type:String,
     },
     googleId: String,
-    orders:{
-        type: [mongoose.Types.ObjectId],
-        ref:'Order',
-    },
+    orders:[{
+        type: mongoose.Types.ObjectId,
+        ref: 'Order'
+      
+    }],
     basket:[{
         type: mongoose.Types.ObjectId,
         ref: 'Inventory'

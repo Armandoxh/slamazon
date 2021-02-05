@@ -7,10 +7,12 @@ const orderSchema = new mongoose.Schema({
      * replace with items tag
      * 
      */
-    basket:[{
+     
+    pendingOrders:[{
         type: mongoose.Types.ObjectId,
         ref: 'Inventory'
     }],
+   
     user : {
         type: mongoose.Types.ObjectId,
         ref: 'User'

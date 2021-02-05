@@ -7,20 +7,30 @@ The problem is the original index page is not getting the foundUser so you need 
 render
 inside the user.js controller
 then ur coolin-->
-    <div class="container-fluid mt-5 mb-5">
+<div class="container-fluid mt-5 mb-5"></div>
         <div class="row">
             <div class="col-8">
-                <%= user %> 
-                <div class="card card-header" >
-                    <div class="card-body card-header">
-                      <h5 class="card-title">Order# 34241341ab1223ac34d</h5>
-                      <p class="card-text">Item Total = $500</p>
-                      
-                      <a href="#" class="card-link">Update Order</a>
-                      <a href="#" class="card-link">Delete Order</a>
-                      <a href="#" class="card-link">Order Details</a>
-                    </div>
-                  </div>
+               
+<%# found.orders.forEach(element => { %>
+    
+               <% if (found) { %>
+                <%= found %> 
+               <% } %>
+                
+                    <div class="card card-header" >
+                        <div class="card-body card-header">
+                            
+                          <h5 class="card-title"></h5>
+                          <p class="card-text"><%#= element %> </p>
+                        
+                          
+                          <a href="#" class="card-link">Update Order</a>
+                          <a href="#" class="card-link">Delete Order</a>
+                          <a href="#" class="card-link">Order Details</a>
+                        </div>
+                      </div>
+                <%# }) %>
+                
 
                 </div>
 

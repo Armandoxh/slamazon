@@ -31,7 +31,7 @@ function index(req, res,next) {
                      
 
                      User.findById(req.user._id).populate('basket').exec(function(err, foundUser){
-                        console.log("Found User in addbasket:" , foundUser)
+                        // console.log("Found User in addbasket:" , foundUser)
                        if(err) return console.log(err)
                        
                        foundUser.save()
@@ -55,9 +55,10 @@ function index(req, res,next) {
      Inventory.find({}, function(err, inventory ) {
          if(err) return console.log(err)
          User.findById(req.user._id).populate('basket').exec(function(err, foundUser){
-             console.log("Found User in addbasket:" , foundUser)
+            //  console.log("Found User in addbasket:" , foundUser)
             if(err) return console.log(err)
             foundUser.basket.push(req.body.itemID)
+
             foundUser.save()
             
             res.render('user/marketplace', {inventory, foundUser});

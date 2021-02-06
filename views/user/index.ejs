@@ -73,8 +73,12 @@ then ur coolin-->
                             <button type="submit" class="btn btn-outline-success lead">View Order Details</button>
                             </form>
         
-        
-                            <button type="button" class="btn btn-outline-danger lead">Cancel Order</button>
+
+                            <form action="/deleteOrder" method="POST">             
+                                <input type="hidden" id="itemID" name="itemID" value="<%=elem._id %>">
+                                <button type="submit" class="btn btn-outline-danger lead">Delete Order</button>
+                                </form>
+                           
         
                       </li>
                    

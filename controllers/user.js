@@ -9,7 +9,8 @@ module.exports = {
     index,
     addOrder,
     placeOrder,
-    renderDetails
+    renderDetails,
+    deleteOrder
     
 }
 
@@ -168,6 +169,10 @@ function renderDetails(req,res){
     res.redirect('user/index')
  
     
+}
+
+function deleteOrder(req,res){
+
 }
 
 

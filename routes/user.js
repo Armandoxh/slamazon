@@ -15,4 +15,6 @@ router.post('/deleteOrder', userCtrl.deleteOrder)
 
 router.post( '/:orderID', userCtrl.orderDetails );
 
+router.post( '/deleteItem', userCtrl.deleteItem );
+
 module.exports = router;

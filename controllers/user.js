@@ -11,7 +11,8 @@ module.exports = {
     placeOrder,
     renderDetails,
     deleteOrder,
-    orderDetails
+    orderDetails,
+    deleteItem
     
 }
 
@@ -160,6 +161,12 @@ const context = {
   
 }
 
+function deleteItem(req,res){
+
+    console.log("DELETE ITEM REQ BODY>ID" , req.body._id)
+    res.redirect('user/index')
+
+}
 function orderDetails(req,res){
     console.log(req.params)
     Order.findById(req.params.orderID).populate('pendingOrders').exec(function(err, found){

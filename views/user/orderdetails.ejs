@@ -3,6 +3,19 @@
 <div class="container-fluid">
     
     
-<%=found%> 
-<%= found.pendingOrders[0].price %> 
+
+    <ul class="list-group">
+    <% found.pendingOrders.forEach(el => { %>
+
+  
+        <li class="list-group-item"><%= el.name %> </li>
+        <form action="/deleteItem" method="POST">             
+            <input type="hidden" id="itemID" name="itemID" value="<%=el._id %>">
+            <button type="submit" class="btn btn-outline-danger lead">Delete Order</button>
+            </form>
+       
+    <% }) %> 
+      </ul>
+
+
   </div>

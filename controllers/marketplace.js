@@ -86,7 +86,7 @@ function index(req, res,next) {
       let invent;
       
 
-    for(let i = 0;i<10;i++){
+    for(let i = 0;i<25;i++){
 
        invent = new Inventory()
         invent.price = faker.random.number(150)

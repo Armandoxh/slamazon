@@ -8,7 +8,8 @@ const mongoose = require('mongoose')
 module.exports = {
     index,
     addOrder,
-    placeOrder
+    placeOrder,
+    renderDetails
     
 }
 
@@ -28,26 +29,10 @@ function index (req, res){
 //   console.log("Order in the second findOne (with the populate on basket and orders:" ,foundUser.orders)
   // console.log("ORDERS", foundUser.orders)
 
-
-
   db.Order.find( {} ).populate('pendingOrders').exec(function(err, foundOrder){
       if(err)return console.log(err)
-      console.log(foundOrder[0].pendingOrders)
-
-      console.log("FOUND ORDER BEING PASSED TO tHE FIRS VIEW RENDER", foundOrder[0].pendingOrders)
-  
-
-      
-           
-         
-      
-
-
-       
         // console.log(foundUser.orders)
-        
         foundUser.basket={}
-
         foundUser.save()
         res.render('user/index',{
             foundUser, 
@@ -124,7 +109,6 @@ function placeOrder(req,res){
 
   db.Order.find( {} ).populate('pendingOrders').exec(function(err, foundOrder){
       if(err)return console.log(err)
-      console.log(foundOrder[0].pendingOrders)
 
  
 
@@ -174,6 +158,17 @@ const context = {
   
 }
 
+
+
+function renderDetails(req,res){
+
+    console.log(req.body)
+    req.session.currentOrderDetails = req.body.itemID
+    console.log(" CURRENT ORDER DETAILS:" , req.session.currentOrderDetails)
+    res.redirect('user/index')
+ 
+    
+}
 
 
 function addToBasket(req,res,next){

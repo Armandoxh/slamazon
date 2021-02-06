@@ -10,41 +10,96 @@ then ur coolin-->
 <div class="container-fluid mt-5 mb-5"></div>
         <div class="row">
             <div class="col-8">
-               
+                <%let id =""%>
+                
 <%# found.orders.forEach(element => { %>
     
-    <% foundOrder.forEach( elem=> { %>        
-    <% for( let i = 0; i < elem.pendingOrders.length; i++ ) { %>
-     <%=elem.pendingOrders[i].name  %> 
-    <% } %>
-             
    
-    
-        
+        <% if ( foundUser && foundOrder) { %>
 
-    <% }) %>
-        
-                
-                    <div class="card card-header" >
-                        <div class="card-body card-header">
-                            
-                          <h5 class="card-title"></h5>
-                          <p class="card-text"><%#= element %> </p>
+            <% foundOrder.forEach( elem=> { %>   
+          
+                <div class="card card-header" >
+                    <div class="card-body card-header alert alert-success">
+                        <h3 class="lead strong">
+                            <strong>Order ID: <%= elem._id %> </strong>
+                        </h3>
+                        <h3 class="lead strong">
+                            <strong>Order Status: <%= elem.orderStatus %> </strong>
+                        </h3>
                         
-                          
-                          <a href="#" class="card-link">Update Order</a>
-                          <a href="#" class="card-link">Delete Order</a>
-                          <a href="#" class="card-link">Order Details</a>
-                        </div>
-                      </div>
+                       
+                        <% let total =0 %> 
+                        <ul class="list-group list-group-flush"></ul>
+                <% for( let i = 0; i < elem.pendingOrders.length; i++ ) { %>
+        
+                    
+                 
+                 
+        <!--                 
+                      <h5 class="card-title"></h5>
+                      <p class="card-text"><%#= element %> </p> -->
+                    
+                      
+                      
+                    
+                        <!-- <li class="list-group-item"> <span >hello</span> </li> -->
+                        <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+                            
+                            <span class=" "> </span>
+                          </li> -->
+                        <li class="list-group-item d-flex justify-content-between align-items-center lead">
+                            <%=elem.pendingOrders[i].name %> 
+                            <span class=" ">$<%= elem.pendingOrders[i].price %> </span>
+                          </li>
+                       
+                       <% total+=elem.pendingOrders[i].price %> 
+                    
+                      
+                     
+                   
+                <% } %>
+               
+                <div class="card-footer">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Order Total
+                        <span class="lead ">$ <%= total %> </span>
+                        <button type="button" class="btn btn-outline-dark lead">Remove Items from Order</button>
+        
+                      
+                        
+                        <form action="/renderOrderDetails" method="POST">             
+                            <input type="hidden" id="itemID" name="itemID" value="<%=elem._id %>">
+                            <button type="submit" class="btn btn-outline-success lead">View Order Details</button>
+                            </form>
+        
+        
+                            <button type="button" class="btn btn-outline-danger lead">Cancel Order</button>
+        
+                      </li>
+                   
+                </div>
+            </ul>
+            
+               
+            </div>
+        </div>
+                <% }) %>
+         
+     
+        <% } else { %>
+            <h1> Welcome to Slamazon </h1>
+        <% } %> 
+
+                    
                 <%# }) %>
                 
 
                 </div>
 
+                <%- include('../partials/orderdetails') %>
                
-                    <div class="col-4">
-                </div>
+                    
      </div>
      </div>
                 

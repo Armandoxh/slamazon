@@ -23,13 +23,13 @@ module.exports = {
 
 
 function index(req, res,next) {
-
+    
     console.log("INDEX FUNCTION OF THE MARKETPLACE JS CONTROLLER")
     Inventory.find({}, function(err, inventory ) {
                      if(err) return console.log(err)
                      
                      
-
+                    
                      User.findById(req.user._id).populate('basket').exec(function(err, foundUser){
                         // console.log("Found User in addbasket:" , foundUser)
                        if(err) return console.log(err)
@@ -41,6 +41,7 @@ function index(req, res,next) {
          res.render('user/marketplace', { inventory,foundUser});
     })
     });
+    
 }
 
 
@@ -89,7 +90,7 @@ function index(req, res,next) {
 
        invent = new Inventory()
         invent.price = faker.random.number(150)
-        invent.quantity = faker.random.number(1500)
+        invent.quantity = faker.random.number(50)
         invent.name = faker.commerce.productName()
         invent.description = faker.commerce.productDescription()
         // console.log(invent)

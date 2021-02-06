@@ -48,6 +48,11 @@ app.use(function(req,res,next){
     next()
   })
 
+  app.use(function(req, res, next) {
+    res.locals.currentOrderDetails = req.session.currentOrderDetails;
+    next();
+  });
+
 app.use('/', indexRouter)
 app.use('/',userRouter)
 app.use('/marketplace',marketRouter )

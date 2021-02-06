@@ -13,9 +13,17 @@ then ur coolin-->
                
 <%# found.orders.forEach(element => { %>
     
-               <% if (found) { %>
-                <%= found %> 
-               <% } %>
+    <% foundOrder.forEach( elem=> { %>        
+    <% for( let i = 0; i < elem.pendingOrders.length; i++ ) { %>
+     <%=elem.pendingOrders[i].name  %> 
+    <% } %>
+             
+   
+    
+        
+
+    <% }) %>
+        
                 
                     <div class="card card-header" >
                         <div class="card-body card-header">

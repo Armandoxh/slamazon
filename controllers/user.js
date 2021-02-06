@@ -13,25 +13,48 @@ module.exports = {
 }
 
 function index (req, res){
+
+    User.findById(req.user._id)
+    // .updateOne(
+    //     { _id: req.user._id },
+    //     { $push: { orders: foundUser.basket } })
+    .populate('basket')
+    .populate('orders'  ,'pendingOrders')
+    .exec(function(err, foundUser){
+        // console.log("Found user" , foundUser.basket)
+
+       if(err) return console.log(err)
+    //    foundUser.orders.push(foundUser.basket._id)
+//   console.log("Order in the second findOne (with the populate on basket and orders:" ,foundUser.orders)
+  // console.log("ORDERS", foundUser.orders)
+
+
+
+  db.Order.find( {} ).populate('pendingOrders').exec(function(err, foundOrder){
+      if(err)return console.log(err)
+      console.log(foundOrder[0].pendingOrders)
+
+      console.log("FOUND ORDER BEING PASSED TO tHE FIRS VIEW RENDER", foundOrder[0].pendingOrders)
   
 
-        User.findById(req.user._id).populate('basket')
-        .populate( 'orders').exec(function(err, foundUser){
-            // console.log("Found user" , foundUser)
-           if(err) return console.log(err)
+      
            
          
-        res.render('user/index',{
-         foundUser
-        })
+      
 
 
        
         // console.log(foundUser.orders)
         
         foundUser.basket={}
+
         foundUser.save()
+        res.render('user/index',{
+            foundUser, 
+            foundOrder
+           })
     })
+})
 }
 
 
@@ -46,9 +69,12 @@ function placeOrder(req,res){
     let newOrder = new Order()
     for (let i = 0; i < copiedBasketIDS.length; i++) {
         newOrder.pendingOrders.push(copiedBasketIDS[i])
+        newOrder.user = req.user._id
     }
+    // console.log(newOrder)
+
     //instead of pushing the order to the user object push the ref to the order!!_!_!_!_
-    console.log(newOrder)
+    // console.log(newOrder)
     
 
     // newOrder.save()
@@ -57,6 +83,8 @@ function placeOrder(req,res){
         } 
         console.log("RESULT" , result)
       });
+
+      
 
 
     //   Order.findById(newOrder._id).populate('pendingOrders').exec(function(err, foundOrder){
@@ -82,6 +110,7 @@ function placeOrder(req,res){
     //     { _id: req.user._id },
     //     { $push: { orders: foundUser.basket } })
     .populate('basket')
+    .populate('orders'  ,'pendingOrders')
     .exec(function(err, foundUser){
         foundUser.orders.push(mongoose.mongo.ObjectId(newOrder._id))
         // console.log("Found user" , foundUser.basket)
@@ -91,24 +120,42 @@ function placeOrder(req,res){
 //   console.log("Order in the second findOne (with the populate on basket and orders:" ,foundUser.orders)
   // console.log("ORDERS", foundUser.orders)
 
-  
 
-  User.findById( req.user._id ).populate('orders'  ,'pendingOrders').exec(function(err,found){
-      if(err) return console.log(err)
-      console.log("Found INSIDE POPULATE OF USERS" , found.pendingOrders)
+
+  db.Order.find( {} ).populate('pendingOrders').exec(function(err, foundOrder){
+      if(err)return console.log(err)
+      console.log(foundOrder[0].pendingOrders)
 
  
+
+
+//   User.findById( req.user._id ).populate('orders'  ,'pendingOrders').exec(function(err,found){
+//       if(err) return console.log(err)
+    //   console.log("Found INSIDE POPULATE OF USERS" , found.pendingOrders
+    //   )
+
+
+ 
+    // console.log("FOUND", found.orders)
+
   foundUser.basket={}
   foundUser.save()
-  console.log("found users orders after push" , found, req.user.orders)
+ 
+//   console.log("REQ USER ORDERS", req.user.orders)
 
-  res.render('user/index',{
-    foundUser,
-    found
-   })
-})
 
+//   console.log("found users orders after push" , found, req.user.orders)
+
+const context = {
+   foundUser,
+   foundOrder
+  }
+
+  res.render('user/index',context)
+    // foundUse)
 })
+})
+// })
       
 //601c7c54d1132c5542e6a998
     // console.log("code after the render")

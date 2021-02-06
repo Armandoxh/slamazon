@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
-const connectionStr = 'mongodb://127.0.0.1:27017/slamazon';
+
+const connectionStr = (process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017/slamazon');
 const faker = require("faker")
 
 mongoose.connect( connectionStr, {

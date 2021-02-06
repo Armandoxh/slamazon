@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const methodOverride = require('method-override');
 const passport = require('passport')
@@ -12,7 +13,7 @@ const userRouter = require('./routes/user')
 const marketRouter = require('./routes/marketplace')
 
 const app = express();
-require('dotenv').config();
+
 
 app.set('view engine', 'ejs');
 

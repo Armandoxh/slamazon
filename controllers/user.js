@@ -10,7 +10,8 @@ module.exports = {
     addOrder,
     placeOrder,
     renderDetails,
-    deleteOrder
+    deleteOrder,
+    orderDetails
     
 }
 
@@ -159,6 +160,17 @@ const context = {
   
 }
 
+function orderDetails(req,res){
+    console.log(req.params)
+    Order.findById(req.params.orderID).populate('pendingOrders').exec(function(err, found){
+        if(err)return console.log(err)
+
+        found.save()
+        console.log(found)
+        res.render('user/orderdetails', {found: found})
+    })
+}
+
 
 
 function renderDetails(req,res){
@@ -173,7 +185,17 @@ function renderDetails(req,res){
 
 function deleteOrder(req,res){
 
+    console.log("DELETEORDER REQ>BODY>ID" , req.body.itemID)
+    Order.findByIdAndDelete(req.body.itemID, function(err,foundOrder){
+        if(err) console.log(err)
+    })
+
+    res.redirect('user/index')
+
+
 }
+
+
 
 
 function addToBasket(req,res,next){

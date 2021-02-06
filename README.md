@@ -1,4 +1,20 @@
 # slamazon
+
+Place an order, view the order details, and edit your orders. Will your order get delivered? Maybe. Our delivery guys  are on strike. Something about unpaid wages. 
+
+Technologies used: 
+-html
+-js
+-nodejs
+-express
+-mongodb
+-mongoose
+-ejs
+
+
+project URL: https://dry-tor-81352.herokuapp.com/
+
+
 User Stories
 
 - 1. A User logs in with Google Auth

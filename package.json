@@ -27,7 +27,8 @@
     "mongoose-seeder": "^1.2.1",
     "morgan": "^1.9.1",
     "passport": "^0.4.1",
-    "passport-google-oauth": "^2.0.0"
+    "passport-google-oauth": "^2.0.0",
+    "faker": "^5.2.0"
   },
   "devDependencies": {
     "faker": "^5.2.0"

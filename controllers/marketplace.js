@@ -3,8 +3,7 @@ const Inventory = require('../models/Inventory');
 const Order = require ('../models/Order')
 const Basket = require('../models/Basket')
 const User = require('../models/User')
-
-var faker = require('faker');
+const faker = require('faker');
 let seeded = false; 
 module.exports = {
     index,

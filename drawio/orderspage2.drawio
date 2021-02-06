@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-01-30T19:35:26.356Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="6awHJ01vBW-PIqvt1c28" version="13.10.0" type="embed">
+<mxfile host="65bd71144e" modified="2021-02-06T19:05:28.356Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="Lr8BDBHQovP2-p-KrlAZ" version="13.10.0" type="embed">
     <diagram id="ahJQOivOzsf9MYJ5AgrW" name="Page-1">
-        <mxGraphModel dx="728" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="728" dy="465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -82,16 +82,6 @@
                         <mxPoint x="200" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="36" value="Vendors" style="fillColor=none;strokeColor=none;fontSize=14;fontColor=#9A9DA0;align=center;spacingRight=0;fontStyle=1" parent="33" vertex="1">
-                    <mxGeometry width="80" height="40" relative="1" as="geometry">
-                        <mxPoint x="270" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="37" value="Orders" style="fillColor=none;strokeColor=none;fontSize=14;fontColor=#9A9DA0;align=center;fontStyle=1" parent="33" vertex="1">
-                    <mxGeometry width="80" height="40" relative="1" as="geometry">
-                        <mxPoint x="340" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="38" value="&lt;b&gt;Search&lt;/b&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;fontSize=14;fontColor=#1CA5B8;strokeColor=#1CA5B8;fillColor=none;" parent="33" vertex="1">
                     <mxGeometry x="1" width="70" height="30" relative="1" as="geometry">
                         <mxPoint x="-80" y="5" as="offset"/>
@@ -118,103 +108,103 @@
                         <mxPoint x="-40" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="236" value="&lt;font color=&quot;#000000&quot;&gt;Create New Order&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;html=1;strokeColor=#C8C8C8;fillColor=#ffffff;whiteSpace=wrap;verticalAlign=top;align=left;fontSize=18;spacing=15;spacingTop=-5;" vertex="1" parent="1">
+                <mxCell id="236" value="&lt;font color=&quot;#000000&quot;&gt;Create New Order&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;html=1;strokeColor=#C8C8C8;fillColor=#ffffff;whiteSpace=wrap;verticalAlign=top;align=left;fontSize=18;spacing=15;spacingTop=-5;" parent="1" vertex="1">
                     <mxGeometry x="50" y="160" width="320" height="490" as="geometry"/>
                 </mxCell>
-                <mxCell id="237" value="" style="shape=line;strokeColor=#dddddd;resizeWidth=1;" vertex="1" parent="236">
+                <mxCell id="237" value="" style="shape=line;strokeColor=#dddddd;resizeWidth=1;" parent="236" vertex="1">
                     <mxGeometry width="320" height="10" relative="1" as="geometry">
                         <mxPoint y="50" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="238" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.x;strokeColor=#868686;strokeWidth=2;" vertex="1" parent="236">
+                <mxCell id="238" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.x;strokeColor=#868686;strokeWidth=2;" parent="236" vertex="1">
                     <mxGeometry x="1" width="8" height="8" relative="1" as="geometry">
                         <mxPoint x="-24" y="20" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="239" value="Recipient:" style="strokeColor=none;fillColor=none;resizeWidth=1;align=left;verticalAlign=top;spacing=10;fontSize=14;whiteSpace=wrap;html=1;" vertex="1" parent="236">
+                <mxCell id="239" value="Recipient:" style="strokeColor=none;fillColor=none;resizeWidth=1;align=left;verticalAlign=top;spacing=10;fontSize=14;whiteSpace=wrap;html=1;" parent="236" vertex="1">
                     <mxGeometry width="320" height="40" relative="1" as="geometry">
                         <mxPoint y="60" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="244" value="Save changes" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;fillColor=#0085FC;strokeColor=none;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="236">
+                <mxCell id="244" value="Save changes" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;fillColor=#0085FC;strokeColor=none;fontColor=#FFFFFF;fontSize=14;" parent="236" vertex="1">
                     <mxGeometry x="1" y="1" width="110" height="40" relative="1" as="geometry">
                         <mxPoint x="-120" y="-50" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="245" value="Close" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;fillColor=#6C757D;strokeColor=none;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="236">
+                <mxCell id="245" value="Close" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;fillColor=#6C757D;strokeColor=none;fontColor=#FFFFFF;fontSize=14;" parent="236" vertex="1">
                     <mxGeometry x="1" y="1" width="70" height="40" relative="1" as="geometry">
                         <mxPoint x="-300" y="-50" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="246" value="Choose vendor" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#ffffff;whiteSpace=wrap;align=left;verticalAlign=middle;fontStyle=0;fontSize=14;spacingLeft=10;" vertex="1" parent="236">
+                <mxCell id="246" value="Choose vendor" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#ffffff;whiteSpace=wrap;align=left;verticalAlign=middle;fontStyle=0;fontSize=14;spacingLeft=10;" parent="236" vertex="1">
                     <mxGeometry x="8" y="59.997368421052634" width="302" height="52.98447368421053" as="geometry"/>
                 </mxCell>
-                <mxCell id="247" value="" style="shape=triangle;direction=south;fillColor=#ffffff;strokeColor=none;perimeter=none;" vertex="1" parent="246">
+                <mxCell id="247" value="" style="shape=triangle;direction=south;fillColor=#ffffff;strokeColor=none;perimeter=none;" parent="246" vertex="1">
                     <mxGeometry x="1" y="0.5" width="10" height="5" relative="1" as="geometry">
                         <mxPoint x="-17" y="-2.5" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="248" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="236">
+                <mxCell id="248" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;fillColor=#ffffff;strokeColor=#999999;" parent="236" vertex="1">
                     <mxGeometry x="8" y="112.97894736842106" width="302" height="125.46578947368421" as="geometry"/>
                 </mxCell>
-                <mxCell id="249" value="Pfizer Vaccines" style="fillColor=none;strokeColor=none;align=left;spacing=20;fontSize=14;fontColor=#000000;" vertex="1" parent="248">
+                <mxCell id="249" value="Pfizer Vaccines" style="fillColor=none;strokeColor=none;align=left;spacing=20;fontSize=14;fontColor=#000000;" parent="248" vertex="1">
                     <mxGeometry width="170" height="30" relative="1" as="geometry">
                         <mxPoint y="10" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="250" value="Medical Supply INC" style="fillColor=none;strokeColor=none;align=left;spacing=20;fontSize=14;fontColor=#000000;" vertex="1" parent="248">
+                <mxCell id="250" value="Medical Supply INC" style="fillColor=none;strokeColor=none;align=left;spacing=20;fontSize=14;fontColor=#000000;" parent="248" vertex="1">
                     <mxGeometry width="170" height="30" relative="1" as="geometry">
                         <mxPoint y="40" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="252" value="Big Pharma INC " style="fillColor=none;strokeColor=none;align=left;spacing=20;fontSize=14;fontColor=#000000;" vertex="1" parent="248">
+                <mxCell id="252" value="Big Pharma INC " style="fillColor=none;strokeColor=none;align=left;spacing=20;fontSize=14;fontColor=#000000;" parent="248" vertex="1">
                     <mxGeometry width="170" height="30" relative="1" as="geometry">
                         <mxPoint y="66.49000000000001" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="253" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#000000;" vertex="1" parent="236">
+                <mxCell id="253" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#000000;" parent="236" vertex="1">
                     <mxGeometry x="60" y="260" width="200" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="254" value="&lt;font color=&quot;#000000&quot;&gt;Select Your Items&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;strokeColor=inherit;fillColor=#F7F7F7;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="253">
+                <mxCell id="254" value="&lt;font color=&quot;#000000&quot;&gt;Select Your Items&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;strokeColor=inherit;fillColor=#F7F7F7;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" parent="253" vertex="1">
                     <mxGeometry width="200" height="30" relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="255" value="COVID SWABS&amp;nbsp; &amp;nbsp; &amp;nbsp; $1.99 ea" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="253">
+                <mxCell id="255" value="COVID SWABS&amp;nbsp; &amp;nbsp; &amp;nbsp; $1.99 ea" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" parent="253" vertex="1">
                     <mxGeometry width="200" height="30" relative="1" as="geometry">
                         <mxPoint y="30" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="256" value="VACCINE&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $2.99 ea" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="253">
+                <mxCell id="256" value="VACCINE&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $2.99 ea" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" parent="253" vertex="1">
                     <mxGeometry width="200" height="30" relative="1" as="geometry">
                         <mxPoint y="60" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="257" value="MASKS&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;$1.40 ea" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.bottomButton;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;resizeHeight=0;align=left;spacing=10;" vertex="1" parent="253">
+                <mxCell id="257" value="MASKS&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;$1.40 ea" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.bottomButton;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;resizeHeight=0;align=left;spacing=10;" parent="253" vertex="1">
                     <mxGeometry y="1" width="200" height="30" relative="1" as="geometry">
                         <mxPoint y="-64.74000000000001" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="258" value="GLOVES&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;$0.80 each" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.bottomButton;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;resizeHeight=0;align=left;spacing=10;" vertex="1" parent="253">
+                <mxCell id="258" value="GLOVES&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;$0.80 each" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.bottomButton;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;resizeHeight=0;align=left;spacing=10;" parent="253" vertex="1">
                     <mxGeometry y="1" width="200" height="30" relative="1" as="geometry">
                         <mxPoint y="-34.74000000000001" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="261" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="261" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="460" y="160" width="200" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="262" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Your Order&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;strokeColor=none;fillColor=#0085FC;fontColor=#ffffff;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;gradientColor=#FF99CC;" vertex="1" parent="261">
+                <mxCell id="262" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Your Order&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;strokeColor=none;fillColor=#0085FC;fontColor=#ffffff;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;gradientColor=#FF99CC;" parent="261" vertex="1">
                     <mxGeometry width="200" height="30" relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="263" value="&lt;font style=&quot;font-size: 15px&quot;&gt;1500 FaceMasks&lt;/font&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="261">
+                <mxCell id="263" value="&lt;font style=&quot;font-size: 15px&quot;&gt;1500 FaceMasks&lt;/font&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" parent="261" vertex="1">
                     <mxGeometry width="200" height="30" relative="1" as="geometry">
                         <mxPoint y="30" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="264" value="&lt;font style=&quot;font-size: 15px&quot;&gt;1200 Gloves&lt;/font&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="261">
+                <mxCell id="264" value="&lt;font style=&quot;font-size: 15px&quot;&gt;1200 Gloves&lt;/font&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" parent="261" vertex="1">
                     <mxGeometry width="200" height="30" relative="1" as="geometry">
                         <mxPoint y="60" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="268" value="Place Order With Vendor" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#33A64C;fontColor=#FFFFFF;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;" vertex="1" parent="1">
+                <mxCell id="268" value="Place Order With Vendor" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#33A64C;fontColor=#FFFFFF;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;" parent="1" vertex="1">
                     <mxGeometry x="487.5" y="260" width="145" height="40" as="geometry"/>
                 </mxCell>
             </root>

@@ -2,6 +2,15 @@
 
 Place an order, view the order details, and edit your orders. Will your order get delivered? Maybe. Our delivery guys  are on strike. Something about unpaid wages. 
 
+Approach: 
+1) User populates a basket, 
+2) when the user decides to place the order it gets added to a list of Orders
+3) Basket is cleared
+4) User gets pushed the new order
+5) order, user gets rendered and passsed to the view
+
+
+
 Technologies used: 
 -html
 -js

@@ -58,6 +58,6 @@ app.use('/', indexRouter)
 app.use('/',userRouter)
 app.use('/marketplace',marketRouter )
 
-app.listen(port, () => {
-    console.log(`Port: ${port}`);
+app.listen((process.env.PORT || 3100), () => {
+    
   });

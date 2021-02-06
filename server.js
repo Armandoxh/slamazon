@@ -4,13 +4,14 @@ const methodOverride = require('method-override');
 const passport = require('passport')
 const morgan = require('morgan');
 const session = require('express-session')
-
+var bodyParser = require('body-parser')
 const port = 3100;
 
 //routes
 const indexRouter = require('./routes/index')
 const userRouter = require('./routes/user')
 const marketRouter = require('./routes/marketplace')
+const orderRouter = require('./routes/orders')
 
 const app = express();
 
@@ -25,7 +26,7 @@ require('./config/passport');
  */
 app.use( methodOverride('_method') );
 app.use(express.static('public'));
-
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -57,6 +58,7 @@ app.use(function(req,res,next){
 app.use('/', indexRouter)
 app.use('/',userRouter)
 app.use('/marketplace',marketRouter )
+app.use('/',orderRouter)
 
 app.listen((process.env.PORT || 3100), () => {
     

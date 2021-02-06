@@ -12,9 +12,9 @@ router.post('/renderOrderDetails', userCtrl.renderDetails)
 
 router.post('/deleteOrder', userCtrl.deleteOrder)
   
-
+router.post( '/search', userCtrl.searchOrders );
 router.post( '/:orderID', userCtrl.orderDetails );
 
-router.post( '/deleteItem', userCtrl.deleteItem );
+
 
 module.exports = router;

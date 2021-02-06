@@ -6,7 +6,7 @@ router.get('/', function(req, res) {
     console.log('redirecting to index from index.js route'),
 
     res.render('index', {
-        user: req.user
+        foundUser: req.user
     });
   });
   
@@ -27,5 +27,5 @@ router.get('/', function(req, res) {
     req.logout();
     res.redirect('/');
   });
-  
+
 module.exports= router

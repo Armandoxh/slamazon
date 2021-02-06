@@ -22,6 +22,7 @@ module.exports = {
 
 
 function index(req, res,next) {
+   
     
     console.log("INDEX FUNCTION OF THE MARKETPLACE JS CONTROLLER")
     Inventory.find({}, function(err, inventory ) {
@@ -42,6 +43,7 @@ function index(req, res,next) {
     });
     
 }
+
 
 
 

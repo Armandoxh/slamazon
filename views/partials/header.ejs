@@ -30,16 +30,26 @@
                   <a class="nav-link" href="/marketplace">Marketplace</a>
                 </li>
                 
-                <form class="nav-item d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search by order ID#" aria-label="Search">
+                <!-- <form action="/search" method="POST"> 
+                  <input class="form-control me-2" type="search"  id="itemID" name="itemID" placeholder="Search by order ID#" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-    
+                </form> -->
+
+                <!-- <form action="/searchOrders" method="POST">             
+                  <input type="search" id="ordertoedit" name="ordertoedit" placeholder="Search by order ID#" >
+                  <button type="submit" class="btn btn-outline-success lead">Find Order</button>
+                  </form>
+     -->
               </ul>
              
               <li class = "d-flex">
                
-                  <a class = "nav-link" href="/auth/google"></i>Login with Google</a>
+                <% if (foundUser) { %>
+                  <a class = "nav-link" href="/logout">Log out</a>
+                  <% } else { %>
+                    <a class = "nav-link" href="/auth/google">Login with Google</a>
+                    <% } %>
+                  <!-- <a class = "nav-link" href="/auth/google"></i>Login with Google</a> -->
         
                 </li>
             </div>

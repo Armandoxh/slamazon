@@ -5,13 +5,13 @@
     
 
     <ul class="list-group">
-    <% found.pendingOrders.forEach(el => { %>
+    <% foundUser.pendingOrders.forEach(el => { %>
 
   
         <li class="list-group-item"><%= el.name %> </li>
-        <form action="/deleteItem" method="POST">             
-            <input type="hidden" id="itemID" name="itemID" value="<%=el._id %>">
-            <button type="submit" class="btn btn-outline-danger lead">Delete Order</button>
+        <form action="/editOrder" method="POST">             
+           <span> <input type="hidden" id="itemID" name="itemID" value="<%=el._id %>">
+            <button type="submit" class="btn btn-outline-danger lead">Delete Item</button></span>
             </form>
        
     <% }) %> 

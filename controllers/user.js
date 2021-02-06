@@ -12,7 +12,8 @@ module.exports = {
     renderDetails,
     deleteOrder,
     orderDetails,
-    deleteItem
+    deleteItem,
+    searchOrders
     
 }
 
@@ -168,14 +169,28 @@ function deleteItem(req,res){
 
 }
 function orderDetails(req,res){
-    console.log(req.params)
-    Order.findById(req.params.orderID).populate('pendingOrders').exec(function(err, found){
+    var ObjectID = require('mongodb').ObjectID;
+
+    console.log("req.body", req.params.orderID, req.params)
+    Order.findById(req.params.orderID).populate('pendingOrders').exec(function(err, foundUser){
         if(err)return console.log(err)
 
-        found.save()
-        console.log(found)
-        res.render('user/orderdetails', {found: found})
-    })
+        foundUser.save()
+        console.log(foundUser)
+        res.render('user/orderdetails', {foundUser})
+    
+} )
+}
+
+
+function searchOrders(req,res){
+    console.log("SEARCH REQ BODY" , req)
+    console.log("in search")
+    // Order.findById(req.body.itemID).populate('pendingOrders').exec(function(err, found){
+        
+    //     console.log(found)
+    //     res.render('user/orderdetails', {found: found})
+    // })
 }
 
 

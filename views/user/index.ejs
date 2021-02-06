@@ -50,7 +50,9 @@ then ur coolin-->
                           </li> -->
                         <li class="list-group-item d-flex justify-content-between align-items-center lead">
                             <%=elem.pendingOrders[i].name %> 
-                            <span class=" ">$<%= elem.pendingOrders[i].price %> </span>
+                            <span class=" ">$<%= elem.pendingOrders[i].price %> 
+                            
+                             
                           </li>
                        
                        <% total+=elem.pendingOrders[i].price %> 
@@ -66,15 +68,16 @@ then ur coolin-->
                         <span class="lead ">$ <%= total %> </span>
 
 
-                        <!-- <form action="/<%#=elem._id%>" method="POST">             
-                            <button type="submit" class="btn btn-outline-success lead">Remove Items from Order</button>
+                     <form action="/<%=elem._id%>" method="POST">             
+                                                    <input type="hidden" id="renderedID" name="itemID" value="<%=elem._id %>">
+
+                            <button type="submit" class="btn btn-outline-success lead">Update Order</button>
+       
                             </form>
-        
-         -->
                       
                         
                         <form action="/renderOrderDetails" method="POST">             
-                            <input type="hidden" id="itemID" name="itemID" value="<%=elem._id %>">
+                            <input type="hidden" id="renderedID" name="itemID" value="<%=elem._id %>">
                             <button type="submit" class="btn btn-outline-success lead">View Order Details</button>
                             </form>
         

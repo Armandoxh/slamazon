@@ -5,7 +5,7 @@ const passport = require('passport')
 const morgan = require('morgan');
 const session = require('express-session')
 var bodyParser = require('body-parser')
-const port = 3100;
+const PORT = process.env.PORT || 3100;
 
 //routes
 const indexRouter = require('./routes/index')
@@ -60,6 +60,6 @@ app.use('/',userRouter)
 app.use('/marketplace',marketRouter )
 app.use('/',orderRouter)
 
-app.listen((process.env.PORT || 3100), () => {
+app.listen((PORT || 3100), () => {
     
   });
